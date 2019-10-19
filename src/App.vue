@@ -1,16 +1,16 @@
 <template>
   <div id="loveToKnow">
-    <HomePage msg="Testing landing page"/>
+    <Header />
+    <router-view />
   </div>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
-
+import Header from '@/components/Header.vue'
 export default {
-  name: 'app',
+  name: 'MovieFinder',
   components: {
-    HomePage
+    Header
   }
 }
 </script>
