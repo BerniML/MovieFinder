@@ -16,7 +16,7 @@ import { mapState, mapActions } from 'vuex'
 export default {
   name: 'HomeSearch',
   computed: {
-    ...mapState(['search'])
+    ...mapState(['search', 'connexionError'])
   },
   data () {
     return {
@@ -31,7 +31,7 @@ export default {
     ]),
     async homeSearchRequest () {
       await this.movieTitleRequest(this.movies.searchInput)
-      this.$router.push('/movies')
+      if (!this.connexionError) this.$router.push('/movies')
     }
   }
 }

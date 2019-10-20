@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     movieQuery: '',
-    movieResults: [],
+    connexionError: false,
     search: {
       emptyResults: true,
       results: {
@@ -62,15 +62,24 @@ export default new Vuex.Store({
       state.search.results.director = responseData.Director
       state.search.results.year = responseData.Year
       state.search.emptyResults = false
+      state.connexionError = false
     },
     SET_MOVIE_QUERY (state, movieQuery) {
       state.movieQuery = movieQuery
     },
     SET_NO_RESULTS (state) {
       state.search.emptyResults = true
+    },
+    CONNEXION_ERROR (state) {
+      state.connexionError = true
     }
   },
   actions: {
+    /**
+     * Performs a request to API service and either set the results, or display a connexion error
+     * @param {Object} state  Vuex state
+     * @param {String} movieInput User question
+     */
     async movieTitleRequest (state, movieInput) {
       try {
         const response = await movieService.getUser({
@@ -81,7 +90,6 @@ export default new Vuex.Store({
           state.commit('SET_MOVIE_RESULTS', response.data)
         } else state.commit('SET_NO_RESULTS')
       } catch (e) {
-        console.log(e)
         state.commit('CONNEXION_ERROR')
       }
     }
