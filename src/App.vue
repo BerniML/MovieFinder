@@ -1,7 +1,7 @@
 <template>
   <div id="loveToKnow">
     <Header />
-    <ConnexionError v-if="connexionError"/>
+    <ConnexionError v-if="connexionError" :message="connexionErrorMessage"/>
     <router-view />
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
     ConnexionError
   },
   computed: {
-    ...mapState(['connexionError'])
+    ...mapState(['connexionError','connexionErrorMessage'])
   }
 }
 </script>

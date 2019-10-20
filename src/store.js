@@ -8,6 +8,7 @@ export default new Vuex.Store({
   state: {
     movieQuery: '',
     connexionError: false,
+    connexionErrorMessage: 'Something went wrong! please try again',
     search: {
       emptyResults: true,
       results: {
