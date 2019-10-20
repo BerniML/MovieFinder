@@ -27,8 +27,11 @@ export default {
   },
   methods: {
     ...mapActions([
-      'movieTitleRequest' // perform request to movie API
+      'movieTitleRequest'
     ]),
+    /**
+     * Perform serach API request and push redirect to movies
+     */
     async homeSearchRequest () {
       await this.movieTitleRequest(this.movies.searchInput)
       if (!this.connexionError) this.$router.push('/movies')

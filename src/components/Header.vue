@@ -22,7 +22,7 @@
           size="sm"
           class="my-2 my-sm-0"
           type="submit"
-          @click="movieTitleRequest(movieHeader.searchInput)"
+          @click="submitSearch(movieHeader.searchInput)"
         >Search</b-button>
       </b-navbar-nav>
     </b-collapse>
@@ -49,7 +49,14 @@ export default {
       'movieTitleRequest' // perform request to movie API
     ]),
     onHeaderEnterKey (event) {
-      this.movieTitleRequest(this.movieHeader.searchInput)
+      this.submitSearch(this.movieHeader.searchInput)
+    },
+    /**
+     * Perform serach API request and push redirect to movies
+     */
+    async submitSearch () {
+      await this.movieTitleRequest(this.movieHeader.searchInput)
+      if (!this.connexionError && this.$router.currentRoute.name !== 'movies') this.$router.push('/movies')
     }
   }
 }

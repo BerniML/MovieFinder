@@ -2,14 +2,13 @@
   <div id="HomePage">
     <b-jumbotron>
       <template v-slot:header>
-        <div class="row justify-content-center">MovieFinder</div>
+        <b-row class="justify-content-center">MovieFinder</b-row>
       </template>
 
       <b-container>
         <hr class="my-4" />
-        <div
-          class="row justify-content-center"
-        >Searchsite for searching movies and series, displaying the title, year, poster and director!</div>
+        <b-row class="justify-content-center"
+        >Searchsite for searching movies and series, displaying the title, year, poster and director!</b-row>
 
         <b-row class="justify-content-center mt-3">
           <HomeSearch />
