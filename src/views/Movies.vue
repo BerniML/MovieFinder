@@ -2,7 +2,7 @@
   <div id="movieContainer" class="mt-5">
     <b-container>
       <b-row>
-        <b-col class="text-center"><h2>Results</h2></b-col>
+        <b-col class="text-center"><h2>Movies</h2></b-col>
       </b-row>
       <b-row class="row justify-content-center">
         <b-col class="text-center">
@@ -12,7 +12,7 @@
             v-show="search.emptyResults"
             show
             variant="warning"
-          >I'm sorry, no movies found with this title, please try again!</b-alert>
+          >No movies found with this title, please try again using other words!</b-alert>
         </b-col>
       </b-row>
     </b-container>

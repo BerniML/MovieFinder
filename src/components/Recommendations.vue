@@ -1,6 +1,5 @@
 <template>
   <b-container>
-    <!-- Example row of columns -->
     <b-row>
         <b-col class="text-center"><h2>Recommendations</h2></b-col>
     </b-row>
@@ -12,13 +11,12 @@
         <p>{{movies.year}}</p>
         <p>{{movies.director}}</p>
         <p>
-            <b-button type="submit" variant="secondary" @click="recommendationsRequest(movies.title)">View details</b-button>
+          <b-button type="submit" variant="secondary" @click="recommendationsRequest(movies.title)">View details</b-button>
         </p>
       </b-col>
     </b-row>
     <hr />
   </b-container>
-  <!-- /container -->
 </template>
 
 <script>
@@ -33,6 +31,9 @@ export default {
     ...mapActions([
       'movieTitleRequest' // perform request to movie API
     ]),
+    /**
+     * Performs an API request with the title movie, push redirect to results page
+     */
     async recommendationsRequest (movieTitle) {
       await this.movieTitleRequest(movieTitle)
       this.$router.push('/movies')
