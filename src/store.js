@@ -17,6 +17,20 @@ export default new Vuex.Store({
         year: ''
       }
     },
+    sliderMovies: [
+      {
+        director: 'Steven Spielberg',
+        poster: 'https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg',
+        title: 'Schindler\'s List',
+        year: '1993'
+      },
+      {
+        director: 'Peter Jackson',
+        poster: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg',
+        title: 'The Lord of the Rings: The Fellowship of the Ring',
+        year: '2001'
+      }
+    ],
     recommendations: {
       header: 'Top 3 Rated Movies IMDb',
       movies: [

@@ -13,7 +13,7 @@
           <b-form-input
             size="sm"
             class="mr-sm-2"
-            placeholder="Search"
+            placeholder="Movie title"
             @keydown.enter.native="onHeaderEnterKey"
             v-model="movieHeader.searchInput"
           ></b-form-input>

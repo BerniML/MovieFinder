@@ -21,13 +21,13 @@
 </template>
 
 <script>
-import HomeSearch from "@/components/HomeSearch.vue";
-import Recommendations from "@/components/Recommendations.vue";
+import HomeSearch from '@/components/HomeSearch.vue'
+import Recommendations from '@/components/Recommendations.vue'
 export default {
-  name: "HomePage",
+  name: 'HomePage',
   components: {
     HomeSearch,
     Recommendations
   }
-};
+}
 </script>

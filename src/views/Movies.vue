@@ -1,8 +1,11 @@
 <template>
   <div id="movieContainer" class="mt-5">
     <b-container>
-      <div class="row justify-content-center">
-        <div class="col text-center">
+      <b-row>
+        <b-col class="text-center"><h2>Results</h2></b-col>
+      </b-row>
+      <b-row class="row justify-content-center">
+        <b-col class="text-center">
           <slider></slider>
           <b-alert
             class="mt-5 center-block"
@@ -10,8 +13,8 @@
             show
             variant="warning"
           >I'm sorry, no movies found with this title, please try again!</b-alert>
-        </div>
-      </div>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>

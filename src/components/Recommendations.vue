@@ -2,6 +2,10 @@
   <b-container>
     <!-- Example row of columns -->
     <b-row>
+        <b-col class="text-center"><h2>Recommendations</h2></b-col>
+    </b-row>
+    <hr />
+    <b-row>
       <b-col md="4" v-for="(movies, index) in recommendations.movies" v-bind:key="index">
         <h2>{{movies.title}}</h2>
         <p>{{movies.description}}</p>
