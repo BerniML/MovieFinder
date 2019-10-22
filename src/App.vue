@@ -1,5 +1,5 @@
 <template>
-  <div id="loveToKnow">
+  <div id="MovieFinder">
     <Header />
     <ConnexionError v-if="connexionError" :message="connexionErrorMessage"/>
     <router-view />
