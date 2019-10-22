@@ -13,12 +13,33 @@ npm install
 ```
 npm run serve
 ```
+By default the App will be runnit at:
+  - Local:   http://localhost:8080/
+  - Network: http://192.168.1.12:8080/
+
 
 ### Compiles and minifies for production
 ```
 npm run build
 ```
 
+### Previewing Locally
+
+The dist directory is meant to be served by an HTTP server (unless you've configured publicPath to be a relative value)
+
+First we must compile and minify:
+```
+npm run build
+```
+To preview locally the app, The easiest way to preview your production build locally is using a Node.js static file server,for example [serve](https://github.com/zeit/serve):
+
+```
+npm install -g serve
+```
+
+```
+serve -s dist
+```
 
 ## Application logic and structure
 
