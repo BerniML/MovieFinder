@@ -18,7 +18,7 @@ export default {
     ConnexionError
   },
   computed: {
-    ...mapState(['connexionError','connexionErrorMessage'])
+    ...mapState(['connexionError', 'connexionErrorMessage'])
   }
 }
 </script>
