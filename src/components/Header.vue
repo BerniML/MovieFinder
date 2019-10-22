@@ -55,8 +55,10 @@ export default {
      * Perform serach API request and push redirect to movies
      */
     async submitSearch () {
-      await this.movieTitleRequest(this.movieHeader.searchInput)
-      if (!this.connexionError && this.$router.currentRoute.name !== 'movies') this.$router.push('/movies')
+      if (this.movieHeader.searchInput !== '') {
+        await this.movieTitleRequest(this.movieHeader.searchInput)
+        if (!this.connexionError && this.$router.currentRoute.name !== 'movies') this.$router.push('/movies')
+      }
     }
   }
 }
